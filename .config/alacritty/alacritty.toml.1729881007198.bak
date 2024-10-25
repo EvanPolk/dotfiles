@@ -1,0 +1,13 @@
+import = [
+  "/usr/local/lib/node_modules/alacritty-themes/themes/Catppuccin-Frappe.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "Buttonless"
+
+  [window.padding]
+  x = 10
+  y = 10
