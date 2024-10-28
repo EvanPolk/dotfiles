@@ -107,9 +107,15 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 alias at="alacritty-themes"
 
+# changing cd to use zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
 # .zshrc
 autoload -U promptinit; promptinit
 
-# zstyle ':prompt:pure:prompt:*' color '00d7af'
-
 prompt pure
+
+eval "$(zoxide init zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
