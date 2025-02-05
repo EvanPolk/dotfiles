@@ -1,10 +1,10 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-sketchybar --bar position=top height=45 color=0x00000000 y_offset=16 corner_radius=10 padding_left=16 padding_right=16
+sketchybar --bar position=top height=45 color=0x00000000 y_offset=8 corner_radius=10 padding_left=8 padding_right=8
 
 default=(
-  padding_left=16
-  padding_right=16
+  padding_left=8
+  padding_right=8
   icon.font="FiraCode Nerd Font Mono:Regular:20.0"
   label.font="FiraCode Nerd Font Mono:Medium:14.0"
   icon.color=0xffa6e3a1
@@ -17,7 +17,7 @@ default=(
 sketchybar --default "${default[@]}"
 
 sketchybar --add item logo left \
-           --set logo update_freq=10 icon="" icon.padding_bottom=15 icon.padding_right=15 icon.padding_left=15 background.color=0xff000000 background.height=45 background.corner_radius=10 label.drawing=off icon.font.size=24 padding_left=0 padding_right=16
+           --set logo update_freq=10 icon="" icon.padding_bottom=15 icon.padding_right=15 icon.padding_left=15 background.color=0xff000000 background.height=45 background.corner_radius=10 label.drawing=off icon.font.size=24 padding_left=0 padding_right=8
 
 # workspaces
 for sid in {1..9}; do
@@ -27,9 +27,9 @@ for sid in {1..9}; do
   
   # Special padding for first and last space
   if [ "$sid" -eq 1 ]; then
-    padding_left=15
+    padding_left=8
   elif [ "$sid" -eq 9 ]; then
-    padding_right=15
+    padding_right=8
   fi
 
   space=(
@@ -55,7 +55,7 @@ sketchybar --add bracket spaces '/space\..*/' \
                         background.corner_radius=10
 
 sketchybar --add item clock right \
-           --set clock update_freq=10 icon="󰥔" script="$PLUGIN_DIR/clock.sh" label.padding_right=10 icon.padding_left=10 icon.font.size=22
+           --set clock update_freq=10 icon="󰥔" script="$PLUGIN_DIR/clock.sh" label.padding_right=10 icon.padding_left=8 icon.font.size=22
 
 sketchybar --add bracket clock \
            --set clock background.color=0xff000000 \

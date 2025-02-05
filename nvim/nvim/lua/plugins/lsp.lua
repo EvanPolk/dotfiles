@@ -26,7 +26,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 local languages = {
-   "clangd",
    "html",
    "cssls",
    "ts_ls",
@@ -77,11 +76,6 @@ return {
 
          local nvim_lsp = require("lspconfig")
 
-         nvim_lsp.denols.setup({
-            capabilities = capabilities,
-            root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
-         })
-
          vim.keymap.set(
             "n",
             "<Leader>e",
@@ -121,11 +115,9 @@ return {
       opts = {
          ensure_installed = {
             "lua_ls",
-            "clangd",
             "html",
             "cssls",
             "ts_ls",
-            "denols",
             "emmet_ls",
             "eslint",
             "tailwindcss",

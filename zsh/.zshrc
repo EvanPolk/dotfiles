@@ -4,18 +4,12 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-plugins=(
-  vi-mode 
-  web-search
-  zsh-autosuggestions
-)
-
 source $ZSH/oh-my-zsh.sh
 
 PROMPT='%F{green}%n%f=>%F{blue}%~%f | '
 
-path+=('/home/m4xshen/.local/bin')
-path+=('/home/m4xshen/.local/share/gem/ruby/3.0.0/bin')
+path+=('/home/evanp/.local/bin')
+path+=('/home/evanp/.local/share/gem/ruby/3.0.0/bin')
 export EDITOR='nvim'
 export PATH=/opt/homebrew/bin:$PATH
 
@@ -44,12 +38,3 @@ fi
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-eval "$(zoxide init zsh)"
-alias cd='z'
-. "/Users/m4xshen/.deno/env"
-. "$HOME/.local/bin/env"
