@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 fpath=($HOME/completion_zsh $fpath)
+
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
@@ -11,6 +12,7 @@ PROMPT='%F{green}%n%f=>%F{blue}%~%f | '
 path+=('/home/evanp/.local/bin')
 path+=('/home/evanp/.local/share/gem/ruby/3.0.0/bin')
 export EDITOR='nvim'
+export PATH=$HOME/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 
 # alias
